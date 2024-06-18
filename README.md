@@ -1,6 +1,13 @@
 <p align="center">
     <img src="__assets__/logo.png" height="100">
 </p>
+## Video Test ##
+
+
+https://github.com/YuLunQi/APISR/assets/150509226/f51ba716-36cd-4a1a-a6c4-cd2b4af0329c
+
+
+
 
 ## APISR: Anime Production Inspired Real-World Anime Super-Resolution (CVPR 2024)
 APISR is an upscaler that aims at restoring and enhancing low-quality low-resolution anime images and video sources with various degradations from real-world scenarios. 
