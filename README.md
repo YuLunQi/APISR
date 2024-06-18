@@ -12,9 +12,7 @@ https://github.com/YuLunQi/APISR/assets/150509226/f51ba716-36cd-4a1a-a6c4-cd2b4a
 ## APISR: Anime Production Inspired Real-World Anime Super-Resolution (CVPR 2024)
 APISR is an upscaler that aims at restoring and enhancing low-quality low-resolution anime images and video sources with various degradations from real-world scenarios. 
  
-[![Arxiv](https://img.shields.io/badge/Arxiv-<COLOR>.svg)](https://arxiv.org/abs/2403.01598) &ensp; [![HF Demo](https://img.shields.io/static/v1?label=Demo&message=HuggingFace&color=orange)](https://huggingface.co/spaces/HikariDawn/APISR)  &ensp; [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/camenduru/APISR-jupyter/blob/main/APISR_jupyter.ipynb) &ensp;   [![HF Demo](https://img.shields.io/static/v1?label=Demo&message=OpenBayes%E8%B4%9D%E5%BC%8F%E8%AE%A1%E7%AE%97&color=green)](https://openbayes.com/console/public/tutorials/DZr8QYzH5LZ)  &ensp;
 
-👀 [**Visualization**](#Visualization)  **|** 🔥 [Update](#Update) **|** 🔧 [Installation](#installation) **|** 🏰 [**Model Zoo**](docs/model_zoo.md) **|** ⚡ [Inference](#inference) **|** 🧩 [Dataset Curation](#dataset_curation) **|** 💻 [Train](#train) 
 
 
 
@@ -23,12 +21,12 @@ APISR is an upscaler that aims at restoring and enhancing low-quality low-resolu
 </p>
 
 
-:star: **If you like APISR, please help star this repo. Thanks!** :hugs:
+
 
 
 
 <!---------------------------------------- Visualization ---------------------------------------->
-## <a name="Visualization"></a> Visualization (Click them for the best view!) 👀
+## <a name="Visualization"></a> Visualization (Click them for the best view!) 
 
 <!-- Kiteret: https://imgsli.com/MjQ1NzE0 -->
 <!-- EVA: https://imgsli.com/MjQ1NzIx -->
@@ -58,19 +56,10 @@ APISR is an upscaler that aims at restoring and enhancing low-quality low-resolu
 
 
 
-## <a name="Update"></a>Update 🔥🔥🔥
-- [x] Release Paper version implementation of APISR 
-- [x] Release different upscaler factor weight (for 2x, 4x and more)
-- [x] Gradio demo (with online)
-- [x] Provide weight with different architecture (DAT-Small)
-- [ ] Add the result combined with Toon Crafter
-- [ ] Release the weight trained with Diffusion Generated Images
-- [ ] Create a Project Page
-- [ ] Some Online Demo for Chinese users && README in Chinese
 
 
 
-## <a name="installation"></a> Installation 🔧
+## <a name="installation"></a> Installation 
 
 ```shell
 git clone git@github.com:Kiteretsu77/APISR.git
@@ -95,7 +84,7 @@ sudo apt install ffmpeg
 
 
 
-## <a name="inference"></a> Gradio Fast Inference ⚡⚡⚡
+## <a name="inference"></a> Gradio Fast Inference 
 Gradio option doesn't need to prepare the weight from the user side but they can only process one image each time.
 
 Online demo can be found at https://huggingface.co/spaces/HikariDawn/APISR (HuggingFace) or https://colab.research.google.com/github/camenduru/APISR-jupyter/blob/main/APISR_jupyter.ipynb (Colab)
@@ -108,7 +97,7 @@ python app.py
 **Note:** Gradio is designed for fast inference, so we will automatically download existing weights and downsample to 720P to ease the VRAM consumption. For a full grounder inference, please check the regular inference section below.
 
 
-## <a name="regular_inference"></a> Regular Inference ⚡⚡
+## <a name="regular_inference"></a> Regular Inference 
 
 1. Download the model weight from [**model zoo**](docs/model_zoo.md) and **put the weight to "pretrained" folder**.
 
@@ -120,7 +109,7 @@ python app.py
 
 
 
-## <a name="dataset_curation"></a> Dataset Curation 🧩
+## <a name="dataset_curation"></a> Dataset Curation 
 Our dataset curation pipeline is under **dataset_curation_pipeline** folder. 
 
 You can collect your dataset by sending videos (mp4 or other format) into the pipeline and get the least compressed and the most informative images from the video sources. 
@@ -149,7 +138,7 @@ You can collect your dataset by sending videos (mp4 or other format) into the pi
 
 
 
-## <a name="train"></a> Train 💻
+## <a name="train"></a> Train 
 
 **The whole training process can be done in one RTX3090/4090!**
 
@@ -189,44 +178,6 @@ You can collect your dataset by sending videos (mp4 or other format) into the pi
 
 
 
-## Citation
-Please cite us if our work is useful for your research.
-```
-@article{wang2024apisr,
-  title={APISR: Anime Production Inspired Real-World Anime Super-Resolution},
-  author={Wang, Boyang and Yang, Fengyu and Yu, Xihang and Zhang, Chao and Zhao, Hanbin},
-  journal={arXiv preprint arXiv:2403.01598},
-  year={2024}
-}
-```
-
-## Disclaimer
-This project is released for academic use only. We disclaim responsibility for the distribution of the model weight and sample images. Users are solely liable for their actions. 
-The project contributors are not legally affiliated with, nor accountable for, users' behaviors.
-
-
-## License
-This project is released under the [GPL 3.0 license](LICENSE).
-
-## 📧 <a name="contact"></a> Contact
-If you have any questions, please feel free to contact me at hikaridawn412316@gmail.com or boyangwa@umich.edu.
-
-
-## 🧩 Projects that use APISR
-
-If you develop/use APISR in your projects, welcome to let me know. I will write all of them here. Thanks!
-
-- Fast Anime SR acceleration: https://github.com/Kiteretsu77/FAST_Anime_VSR 
-- ComfyUI: https://github.com/ZHO-ZHO-ZHO/ComfyUI-APISR and https://github.com/kijai/ComfyUI-APISR
-- Jupyter Notebook: https://github.com/camenduru/APISR-jupyter
 
 
 
-
-## 🤗 Acknowledgement
-- [VCISR](https://github.com/Kiteretsu77/VCISR-official): My code base is based on my previous paper (WACV 2024).
-- [IC9600](https://github.com/tinglyfeng/IC9600): The dataset curation pipeline uses IC9600 code to score image complexity level.
-- [danbooru-pretrained](https://github.com/RF5/danbooru-pretrained): Our Anime Dataset (Danbooru) pretrained RESNET50 model.
-- [Jupyter Demo](https://github.com/camenduru/APISR-jupyter): The jupter notebook demo is from [camenduru](https://github.com/camenduru).
-- [AVIF&HEIF](https://github.com/bigcat88/pillow_heif): The degradation of AVIF and HEFI is from pillow_heif.
-- [DAT](https://github.com/zhengchen1999/DAT): The DAT architecture we use for 4x scaling in model zoo is coming from this [link](https://github.com/zhengchen1999/DAT).
